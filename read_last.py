@@ -1,3 +1,10 @@
+# Напишите функцию read_last(lines, file), которая будет открывать определенный файл file 
+# и выводить на печать построчно последние строки в количестве lines (на всякий случай 
+# проверим, что задано положительное целое число). 
+
+# реализовать функцию longest_words(file), которая выводит слово, имеющее максимальную длину 
+# (или список слов, если таковых несколько)
+
 def read_last(lines_count, filename):
     if lines_count <= 0:
         return
@@ -15,7 +22,6 @@ def longest_words(filename):
     max_len = 0
     with open(filename,"r",encoding="UTF-8") as file:
         lines = file.read().splitlines()
-        # lines = list(map(lambda x: x.strip(),lines))
         for line in lines:
             words = line.split(" ")
             for word in words:
